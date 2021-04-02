@@ -1,12 +1,18 @@
 #!/bin/bash
 
+# This tmux automation script creates my standard 5 pane setup
+# for displaying darksky weather report and server system information.
+# This script should be run on a pre-created single window/pane tmux
+# session.
+# If the initial tmux session is to be created in detached mode, the
+# width and height of the session window should be set to suit the
+# dimensions of the splits, using the '-x' & '-y' parameters, to avoid
+# the default setup of 80 cols by 25 lines.
+
 session=${1}
-split=${2}
-orient=${3}
-size=${4}
-
-
-cd $HOME
+# split=${2}
+# orient=${3}
+# size=${4}
 
 
 tmux split-pane -t ${session}:1 -h
