@@ -44,6 +44,8 @@ tmux send-keys -t ${session}:1.3 "pipenv run python cpu_temp02.py" Enter
 # pane :1.4
 sleep 2
 tmux send-keys -t ${session}:1.4 "cd ~/bin/darksky_weather" Enter
+tmux send-keys -t ${session}:1.4 "./getdarkweather" Enter
+sleep 5
 tmux send-keys -t ${session}:1.4 "./entr_dark.sh" Enter
 
 # pane :1.1 (foreground process)
